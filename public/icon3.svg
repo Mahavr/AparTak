@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<path fill="none" stroke="#c89365" style="stroke: var(--color1, #c89365)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1636" d="M17.28 30h-15.28v-22.907l7.64-5.093 7.64 5.093v22.907z"></path>
+<path fill="none" stroke="#c89365" style="stroke: var(--color1, #c89365)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1636" d="M10.907 26.187h-2.547v3.813h2.547v-3.813z"></path>
+<path fill="none" stroke="#c89365" style="stroke: var(--color1, #c89365)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1636" d="M30 30h-12.72v-17.813l6.36-3.827 6.36 3.827v17.813z"></path>
+</svg>

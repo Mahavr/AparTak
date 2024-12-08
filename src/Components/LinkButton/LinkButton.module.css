@@ -1,0 +1,12 @@
+.button {
+  background-color: var(--background);
+  color: var(--black);
+  padding: 15px 40px;
+  font-size: 20px;
+
+}
+.button:hover,
+.button:focus {
+  background-color: var(--accent);
+  color: var(--main);
+}

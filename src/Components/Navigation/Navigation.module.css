@@ -1,0 +1,14 @@
+.header {
+  background-color: var(--main);
+  padding: 8px 40px;
+  border-bottom: 3px solid var(--black);
+}
+.nav {
+  display: flex;
+  gap: 50px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.icon {
+  width: 115px;
+}
+.card {
+  background-color: var(--main);
+  width: 300px;
+  height: 291px;
+  color: var(--background);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 6px;
+  text-align: center;
+}

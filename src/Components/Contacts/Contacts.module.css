@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  gap: 36px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--background);
+}
+.logo {
+  height: 19px;
+  margin-right: 11px;
+}
+.link:hover,
+.link:focus {
+  color: var(--accent);
+}
