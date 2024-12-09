@@ -1,0 +1,52 @@
+.filtersWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.picker {
+  background-color: var(--main);
+  width: 200px;
+  height: 30px;
+  color: var(--accent);
+
+  padding: 0px 10px;
+
+  outline: none;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 600;
+}
+
+.priceText {
+  align-self: center;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.filtersButton {
+  color: var(--accent);
+  background-color: var(--main);
+  width: 200px;
+  height: 30px;
+
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: none;
+
+  transition: all linear 300ms;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    color: var(--main);
+    cursor: pointer;
+
+    box-shadow: 1px 1px 8px 0px var(--main);
+  }
+}

@@ -11,6 +11,14 @@
   background-size: cover;
   margin: 0 auto;
 }
+
+.apartsPageSection {
+  max-width: 1440px;
+  padding: 50px 0;
+
+  margin: 0 auto;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -64,4 +72,117 @@
 .btn {
   display: flex;
   justify-content: flex-end;
+}
+
+.apartmentsCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 60px;
+}
+
+.apartmentsCardsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.apartsPageTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--main);
+}
+
+.cardsList {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 25px;
+  gap: 55px;
+
+  flex-wrap: wrap;
+}
+
+.photosCarousel {
+  width: 50%;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--main);
+  font-weight: 700;
+
+  width: 50%;
+  height: 100%;
+}
+
+.ApartTitle {
+  font-size: 32px;
+  color: var(--black);
+  margin-bottom: 90px;
+}
+
+.apartText {
+  font-size: 20px;
+  margin-bottom: 25px;
+  & > span {
+    color: var(--accent);
+  }
+}
+
+.buttonStyle {
+  align-self: flex-end;
+  width: 240px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--main);
+  color: var(--accent);
+
+  font-size: 20px;
+  font-weight: 700;
+
+  transition: all linear 300ms;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    color: var(--main);
+    box-shadow: 1px 1px 8px 0px var(--main);
+  }
+}
+
+.failPage {
+  color: var(--white);
+  font-size: 30px;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.backToReality {
+  color: var(--white);
+  font-size: 25px;
+  text-decoration: underline;
+
+  transition: color linear 200ms;
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
 }

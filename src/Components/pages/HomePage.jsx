@@ -2,42 +2,28 @@ import css from "./pages.module.css";
 import { Card } from "../Card/Card";
 import { LinkButton } from "../LinkButton/LinkButton";
 import { Modal } from "../Modal/Modal";
-import { useState, useEffect } from "react";
 import { ApartmentCard } from "../ApartmentCard/ApartmentCard";
-import { getApartments } from "../../service/getApartment";
+import { useState, useEffect } from "react";
+import { fetchApartmentsData } from "../../service/fetchApartmentsData";
 
 export default function HomePage() {
-  const [apartments, setApartments] = useState(); // Початковий стан — null, щоб показати завантаження
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    // Завантаження даних перед рендерингом
-    const fetchApartments = async () => {
-      try {
-        setApartments ( await getApartments());
-   
-      } catch (error) {
-        console.error("Помилка завантаження даних:", error);
-      }
-    };
-
-    console.log(apartments)
-
-    fetchApartments();
-  }, []);
+  const [apartmentsData, setApartmentsData] = useState(null);
 
   const openModal = () => {
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  // Показуємо спіннер до моменту отримання даних
-  if (apartments === null) {
-    return <div className={css.loader}>Завантаження...</div>;
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchApartmentsData();
+      setApartmentsData(data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -77,13 +63,15 @@ export default function HomePage() {
       <section>
         <div className={css.container}>
           <h2 className={css.sectionTitle}>Наші квартири</h2>
-          <div>
-            <ApartmentCard data={apartments.data} id={1} size={"big"} />
-            <ApartmentCard data={apartments.data} id={2} size={"small"} />
-          </div>
-          <div>
-            <ApartmentCard data={apartments.data} id={3} size={"small"} />
-            <ApartmentCard data={apartments.data} id={4} size={"big"} />
+          <div className={css.apartmentsCardsWrapper}>
+            <div className={css.apartmentsCardsContainer}>
+              <ApartmentCard data={apartmentsData} id={1} size={"big"} />
+              <ApartmentCard data={apartmentsData} id={2} size={"small"} />
+            </div>
+            <div className={css.apartmentsCardsContainer}>
+              <ApartmentCard data={apartmentsData} id={3} size={"small"} />
+              <ApartmentCard data={apartmentsData} id={4} size={"big"} />
+            </div>
           </div>
         </div>
       </section>

@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swaphttps://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swaphttps://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
-	--main: #495B71;
-	--accent: #C89365;
-	--background: #C0C7CF;
-  --white:#FCFDFF;
-  --black:#01060A;
+  --main: #495b71;
+  --accent: #c89365;
+  --background: #c0c7cf;
+  --white: #fcfdff;
+  --black: #01060a;
+  --cards-background: #d9d9d9;
+}
 
-	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 * {
@@ -43,7 +49,6 @@ li {
   list-style: none;
 }
 
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -58,7 +63,6 @@ li {
   overflow: hidden;
 }
 body {
-  font-family:"Rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: var(--background);
- 
 }
